@@ -1,0 +1,108 @@
+{
+  "German": [
+    {
+      "hlsURL": "http://n24-live.hls.adaptive.level3.net/hls-live/n24-pssimn24live/_definst_/live.m3u8",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/N24_logo.svg/640px-N24_logo.svg.png",
+      "name": "N24"
+    },
+    {
+      "hlsURL": "http://daserste_live-lh.akamaihd.net/i/daserste_de@91204/master.m3u8",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/ARD_logo.svg/640px-ARD_logo.svg.png",
+      "name": "ARD"
+    },
+    {
+      "hlsURL": "http://tagesschau-lh.akamaihd.net/i/tagesschau_1@119231/master.m3u8",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Tagesschau24-2012.svg/640px-Tagesschau24-2012.svg.png",
+      "name": "tagesschau24"
+    },
+    {
+      "hlsURL": "http://zdf-hds-de-f.zdf.de/i/de14_v1@147090/master.m3u8?b=0-710&dw=0",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/ZDF.svg/640px-ZDF.svg.png",
+      "name": "ZDF"
+    },
+    {
+      "hlsURL": "http://zdf_hds_ng-f.akamaihd.net/i/none02_v1@87014/master.m3u8?dw=0",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/3sat-Logo.svg/640px-3sat-Logo.svg.png",
+      "name": "3sat"
+    },
+    {
+      "hlsURL": "http://delive.artestras.cshls.lldns.net/artestras/contrib/delive.m3u8",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Arte_Logo_2011.svg/640px-Arte_Logo_2011.svg.png",
+      "name": "Arte"
+    },
+    {
+      "hlsURL": "http://kika_geo-lh.akamaihd.net/i/livetvkika_de@75114/master.m3u8",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Kika_2012.svg/640px-Kika_2012.svg.png",
+      "name": "KiKa"
+    },
+    {
+      "hlsURL": "http://zdf_hds_de-f.akamaihd.net/i/de11_v1@87013/master.m3u8",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Zdf.kultur_logo.svg/640px-Zdf.kultur_logo.svg.png",
+      "name": "ZDF.kultur"
+    },
+    {
+      "hlsURL": "http://zdf_hds_de-f.akamaihd.net/i/de12_v1@87013/master.m3u8",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/ZDFinfo_2011.svg/640px-ZDFinfo_2011.svg.png",
+      "name": "ZDF.info"
+    },
+    {
+      "hlsURL": "http://zdf_hds_de-f.akamaihd.net/i/de13_v1@147090/master.m3u8",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/ZDFneo.svg/640px-ZDFneo.svg.png",
+      "name": "ZDF neo"
+    },
+    {
+      "hlsURL": "http://livestreams.br.de/i/bralpha_germany@119899/master.m3u8",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/ARD_alpha.svg/640px-ARD_alpha.svg.png",
+      "name": "BR alpha"
+    },
+    {
+      "hlsURL": "http://mdr_th_hls-lh.akamaihd.net/i/livetvmdrthueringen_de@106903/master.m3u8",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/MDR_Dachmarke.svg/640px-MDR_Dachmarke.svg.png",
+      "name": "MDR"
+    },
+    {
+      "hlsURL": "http://rbb_live-lh.akamaihd.net/i/rbb_berlin@108248/master.m3u8",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/RBB_Dachmarke.svg/640px-RBB_Dachmarke.svg.png",
+      "name": "RBB Berlin"
+    },
+    {
+      "hlsURL": "http://rbb_live-lh.akamaihd.net/i/rbb_brandenburg@107638/master.m3u8",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/RBB_Dachmarke.svg/640px-RBB_Dachmarke.svg.png",
+      "name": "RBB Brandenburg"
+    },
+    {
+      "hlsURL": "http://video1.anixehd.tv:8080/Apple/wifistream.m3u8",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Anixe.svg/640px-Anixe.svg.png",
+      "name": "ANIXE"
+    }
+  ],
+  "Austria": [
+    {
+      "hlsURL": "http://apasfiisl.apa.at/ipad/orf1_q4a/orf.sdp/playlist.m3u8",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/ORFeins.svg/640px-ORFeins.svg.png",
+      "name": "ORF 1"
+    },
+    {
+      "hlsURL": "http://apasfiisl.apa.at/ipad/orf2_q4a/orf.sdp/playlist.m3u8",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/ORF2_logo_n.svg/640px-ORF2_logo_n.svg.png",
+      "name": "ORF 2"
+    },
+    {
+      "hlsURL": "http://apasfiisl.apa.at/ipad/orf3_q4a/orf.sdp/playlist.m3u8",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/ORF_III_Logo_Monochrom.svg/640px-ORF_III_Logo_Monochrom.svg.png",
+      "name": "ORF 3"
+    }
+  ],
+  "USA": [
+    {
+      "hlsURL": "http://nflsvglagame1-i.akamaihd.net/hls/live/223206/NFL_Mobile/2015Mobile_NFLN_2000k.m3u8",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/de/thumb/1/12/National_Football_League_2008.svg/456px-National_Football_League_2008.svg.png",
+      "name": "NFL"
+    },
+    {
+      "hlsURL": "http://54.255.155.24:1935//Live/_definst_/sweetbcha1novD28_W_150.sdp/playlist.m3u8",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/de/thumb/2/2b/CARTOON_NETWORK_logo2010.svg/640px-CARTOON_NETWORK_logo2010.svg.png",
+      "name": "Cartoon Network"
+    }
+  ]
+}
