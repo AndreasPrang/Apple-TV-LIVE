@@ -1,0 +1,341 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7904EB451BDABC5C00FA9DC1 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7904EB441BDABC5C00FA9DC1 /* MainTabBarController.swift */; };
+		7904EB471BDC216300FA9DC1 /* tvStations.json in Resources */ = {isa = PBXBuildFile; fileRef = 7904EB461BDC216300FA9DC1 /* tvStations.json */; };
+		793846921BD99469004F66B5 /* icon_large.lsr in Resources */ = {isa = PBXBuildFile; fileRef = 793846911BD99469004F66B5 /* icon_large.lsr */; };
+		797C5FFF1BD40CBB00E2BFB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C5FFE1BD40CBB00E2BFB4 /* AppDelegate.swift */; };
+		797C60041BD40CBB00E2BFB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 797C60021BD40CBB00E2BFB4 /* Main.storyboard */; };
+		797C60061BD40CBB00E2BFB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 797C60051BD40CBB00E2BFB4 /* Assets.xcassets */; };
+		797C60101BD40DED00E2BFB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C600F1BD40DED00E2BFB4 /* ViewController.swift */; };
+		797C60121BD4107900E2BFB4 /* SenderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C60111BD4107900E2BFB4 /* SenderCollectionViewCell.swift */; };
+		797C60141BD41ACF00E2BFB4 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C60131BD41ACF00E2BFB4 /* PlayerViewController.swift */; };
+		797C60161BD4223D00E2BFB4 /* tvStations2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 797C60151BD4223D00E2BFB4 /* tvStations2.plist */; };
+		797C60181BD4242C00E2BFB4 /* TVStationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C60171BD4242C00E2BFB4 /* TVStationsController.swift */; };
+		799E7ABD1BD8281500A3E65A /* icon.lsr in Resources */ = {isa = PBXBuildFile; fileRef = 799E7ABC1BD8281500A3E65A /* icon.lsr */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7904EB441BDABC5C00FA9DC1 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		7904EB461BDC216300FA9DC1 /* tvStations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tvStations.json; sourceTree = "<group>"; };
+		7904EB481BDC2E6100FA9DC1 /* LIVE-TV-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LIVE-TV-Bridging-Header.h"; sourceTree = "<group>"; };
+		793846911BD99469004F66B5 /* icon_large.lsr */ = {isa = PBXFileReference; lastKnownFileType = file; path = icon_large.lsr; sourceTree = "<group>"; };
+		797C5FFB1BD40CBB00E2BFB4 /* LIVE-TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LIVE-TV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		797C5FFE1BD40CBB00E2BFB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		797C60031BD40CBB00E2BFB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		797C60051BD40CBB00E2BFB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		797C60071BD40CBB00E2BFB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		797C600F1BD40DED00E2BFB4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		797C60111BD4107900E2BFB4 /* SenderCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SenderCollectionViewCell.swift; sourceTree = "<group>"; };
+		797C60131BD41ACF00E2BFB4 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		797C60151BD4223D00E2BFB4 /* tvStations2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tvStations2.plist; sourceTree = "<group>"; };
+		797C60171BD4242C00E2BFB4 /* TVStationsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVStationsController.swift; sourceTree = "<group>"; usesTabs = 1; };
+		799E7ABC1BD8281500A3E65A /* icon.lsr */ = {isa = PBXFileReference; lastKnownFileType = file; path = icon.lsr; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		797C5FF81BD40CBB00E2BFB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		797C5FF21BD40CBB00E2BFB4 = {
+			isa = PBXGroup;
+			children = (
+				797C5FFD1BD40CBB00E2BFB4 /* liveTV */,
+				797C5FFC1BD40CBB00E2BFB4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		797C5FFC1BD40CBB00E2BFB4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				797C5FFB1BD40CBB00E2BFB4 /* LIVE-TV.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		797C5FFD1BD40CBB00E2BFB4 /* liveTV */ = {
+			isa = PBXGroup;
+			children = (
+				793846911BD99469004F66B5 /* icon_large.lsr */,
+				799E7ABC1BD8281500A3E65A /* icon.lsr */,
+				797C5FFE1BD40CBB00E2BFB4 /* AppDelegate.swift */,
+				797C60021BD40CBB00E2BFB4 /* Main.storyboard */,
+				797C60051BD40CBB00E2BFB4 /* Assets.xcassets */,
+				797C60071BD40CBB00E2BFB4 /* Info.plist */,
+				797C600F1BD40DED00E2BFB4 /* ViewController.swift */,
+				797C60111BD4107900E2BFB4 /* SenderCollectionViewCell.swift */,
+				797C60131BD41ACF00E2BFB4 /* PlayerViewController.swift */,
+				7904EB461BDC216300FA9DC1 /* tvStations.json */,
+				797C60151BD4223D00E2BFB4 /* tvStations2.plist */,
+				797C60171BD4242C00E2BFB4 /* TVStationsController.swift */,
+				7904EB441BDABC5C00FA9DC1 /* MainTabBarController.swift */,
+				7904EB481BDC2E6100FA9DC1 /* LIVE-TV-Bridging-Header.h */,
+			);
+			name = liveTV;
+			path = "Live-TV";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		797C5FFA1BD40CBB00E2BFB4 /* LIVE-TV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 797C600A1BD40CBB00E2BFB4 /* Build configuration list for PBXNativeTarget "LIVE-TV" */;
+			buildPhases = (
+				797C5FF71BD40CBB00E2BFB4 /* Sources */,
+				797C5FF81BD40CBB00E2BFB4 /* Frameworks */,
+				797C5FF91BD40CBB00E2BFB4 /* Resources */,
+				799477C41BDC45CA00A3A729 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LIVE-TV";
+			productName = "Öffentlich Rechtliche LIVE";
+			productReference = 797C5FFB1BD40CBB00E2BFB4 /* LIVE-TV.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		797C5FF31BD40CBB00E2BFB4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "iSolute-Berlin";
+				TargetAttributes = {
+					797C5FFA1BD40CBB00E2BFB4 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = Y6ER5M2443;
+					};
+				};
+			};
+			buildConfigurationList = 797C5FF61BD40CBB00E2BFB4 /* Build configuration list for PBXProject "LIVE-TV" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 797C5FF21BD40CBB00E2BFB4;
+			productRefGroup = 797C5FFC1BD40CBB00E2BFB4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				797C5FFA1BD40CBB00E2BFB4 /* LIVE-TV */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		797C5FF91BD40CBB00E2BFB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7904EB471BDC216300FA9DC1 /* tvStations.json in Resources */,
+				793846921BD99469004F66B5 /* icon_large.lsr in Resources */,
+				799E7ABD1BD8281500A3E65A /* icon.lsr in Resources */,
+				797C60061BD40CBB00E2BFB4 /* Assets.xcassets in Resources */,
+				797C60161BD4223D00E2BFB4 /* tvStations2.plist in Resources */,
+				797C60041BD40CBB00E2BFB4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		799477C41BDC45CA00A3A729 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "buildPlist=${INFOPLIST_FILE}\necho $buildPlist\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" $buildPlist)\necho $buildNumber\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" $buildPlist";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		797C5FF71BD40CBB00E2BFB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				797C60181BD4242C00E2BFB4 /* TVStationsController.swift in Sources */,
+				797C60121BD4107900E2BFB4 /* SenderCollectionViewCell.swift in Sources */,
+				7904EB451BDABC5C00FA9DC1 /* MainTabBarController.swift in Sources */,
+				797C60141BD41ACF00E2BFB4 /* PlayerViewController.swift in Sources */,
+				797C60101BD40DED00E2BFB4 /* ViewController.swift in Sources */,
+				797C5FFF1BD40CBB00E2BFB4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		797C60021BD40CBB00E2BFB4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				797C60031BD40CBB00E2BFB4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		797C60081BD40CBB00E2BFB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		797C60091BD40CBB00E2BFB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		797C600B1BD40CBB00E2BFB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "Brand Assets";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "LIVE-TV/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.iSolute.liveTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LIVE-TV/LIVE-TV-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		797C600C1BD40CBB00E2BFB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "Brand Assets";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "LIVE-TV/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.iSolute.liveTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LIVE-TV/LIVE-TV-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		797C5FF61BD40CBB00E2BFB4 /* Build configuration list for PBXProject "LIVE-TV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				797C60081BD40CBB00E2BFB4 /* Debug */,
+				797C60091BD40CBB00E2BFB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		797C600A1BD40CBB00E2BFB4 /* Build configuration list for PBXNativeTarget "LIVE-TV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				797C600B1BD40CBB00E2BFB4 /* Debug */,
+				797C600C1BD40CBB00E2BFB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 797C5FF31BD40CBB00E2BFB4 /* Project object */;
+}
