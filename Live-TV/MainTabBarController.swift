@@ -11,16 +11,26 @@ import AVKit
 
 class MainTabBarController : UITabBarController {
 
+	//MARK: Vars
 	let selectedTabKey = "selectedTabKey"
 	
-	override func viewDidAppear(animated: Bool) {
+	//MARK: Private
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		
+	}
+	
+	
+	override func viewDidAppear(animated: Bool)
+	{
 		let selectedTab = NSUserDefaults.standardUserDefaults().integerForKey(selectedTabKey)
 
 		self.selectedIndex = selectedTab
 	}
 	
-	override func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
-		
+	override func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem)
+	{
 		let selectedTab = tabBar.items?.indexOf(item)
 		NSUserDefaults.standardUserDefaults().setInteger(selectedTab!, forKey: "selectedTabKey")
 		NSUserDefaults.standardUserDefaults().synchronize()
