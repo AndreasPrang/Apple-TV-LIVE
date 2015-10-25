@@ -8,49 +8,56 @@
 
 import Foundation
 
+private let _sharedInstance = TVStationsController()
+
 class TVStationsController {
-//	var stations : NSArray! = NSArray.init(contentsOfFile: NSBundle.mainBundle().pathForResource("tvStations", ofType: "plist")!)
 	
-	var stationsDictionary = NSUserDefaults.standardUserDefaults().dictionaryForKey("TVStations") as! NSDictionary
+	private var stationsNSDictionary = NSUserDefaults.standardUserDefaults().dictionaryForKey("TVStations")
+	private var stationsDictionary : Dictionary<String, Array<AnyObject>>? = Dictionary<String, Array<AnyObject>>()
 	
-//	var stationsDictionary : NSDictionary = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("tvStations2", ofType: "plist")!)!
-	var stationsForSection : NSArray  = []
-	
-    init() {
-//         let newStations = NSArray.init(contentsOfURL: NSURL(string: "http://www.andreasprang.de/AppleTV/tvStations2.plist")!)
-    }
+	class var sharedInstance: TVStationsController {
+		return _sharedInstance
+	}
 
-	func initWithSection(region: String) -> TVStationsController? {
-
-//		let newStationsDictionary = NSDictionary(contentsOfURL: NSURL(string: "http://www.andreasprang.de/AppleTV/tvStations2.plist")!)
-//		
-//		if (newStationsDictionary?.allKeys.count > 0) {
-//			stationsDictionary = newStationsDictionary!
-//		}
-
-		// TODO: Kann schief gehen...
-		stationsForSection = stationsDictionary.objectForKey(region) as! NSArray
-		
-		return self
+	private init()
+	{
+		stationsDictionary = stationsNSDictionary as? Dictionary<String, Array<AnyObject>>
 	}
 	
 	// MARK: public
-	func numberOfTVStations() -> Int {
-		return stationsForSection.count
+	func regions() -> Array<String>
+	{
+		return Array(stationsDictionary!.keys)
 	}
 	
-	func nameOfTVStation(station: Int) -> String {
-		let stationDictionary = stationsForSection[station] as! Dictionary<String, String>
+	func numberOfTVStationsInRegion(region: String) -> Int
+	{
+		if let _ = stationsDictionary
+		{
+			let stations = stationsDictionary![region]
+			return (stations!.count)
+		}
+		else
+		{
+			return 0
+		}
+	}
+	
+	func nameOfTVStationInRegion(region: String, station: Int) -> String
+	{
+		let stationDictionary = stationsDictionary![region]![station] as! Dictionary<String, String>
 		return stationDictionary["name"]!
 	}
 
-	func hlsURLOfTVStation(station: Int) -> String {
-		let stationDictionary = stationsForSection[station] as! Dictionary<String, String>
+	func hlsURLOfTVStationInRegion(region: String, station: Int) -> String
+	{
+		let stationDictionary = stationsDictionary![region]![station] as! Dictionary<String, String>
 		return stationDictionary["hlsURL"]!
 	}
 
-	func imageURLOfTVStation(station: Int) -> String {
-		let stationDictionary = stationsForSection[station] as! Dictionary<String, String>
+	func imageURLOfTVStationInRegion(region: String, station: Int) -> String
+	{
+		let stationDictionary = stationsDictionary![region]![station] as! Dictionary<String, String>
 		return stationDictionary["imageURL"]!
 	}
 }

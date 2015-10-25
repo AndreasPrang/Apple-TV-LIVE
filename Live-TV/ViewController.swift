@@ -14,36 +14,43 @@ import AVKit
 
 class ViewController : UICollectionViewController {
  
-    private let reuseIdentifier = "SenderCollectionViewCell"
+	public var region : String = "German"
+
+	private let reuseIdentifier = "SenderCollectionViewCell"
     private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
 	
 	var tvStationsControllerInstance : TVStationsController?
 	
-	func tvStationsController() -> TVStationsController? {
+	func tvStationsController() -> TVStationsController?
+	{
 		if let _ = self.tvStationsControllerInstance {
 
 			return self.tvStationsControllerInstance!
 		}
 		let title = self.title!
-		self.tvStationsControllerInstance = TVStationsController().initWithSection(title)
+		self.tvStationsControllerInstance = TVStationsController.sharedInstance
 		
 		return self.tvStationsControllerInstance
 	}
 	
-	override func viewDidAppear(animated: Bool) {
+	override func viewDidAppear(animated: Bool)
+	{
 		self.collectionView?.backgroundColor = UIColor.clearColor()
 	}
 	
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int
+	{
 		self.collectionView?.delegate = self
 		
 		return 1;
 	}
 	
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+	{
 		let tvStationsControllerInstance = tvStationsController()
 		if let _ = tvStationsControllerInstance {
-			return tvStationsControllerInstance!.numberOfTVStations()
+			let numberOfItems = tvStationsControllerInstance!.numberOfTVStationsInRegion(region)
+			return numberOfItems
 		}
 		else
 		{
@@ -51,43 +58,52 @@ class ViewController : UICollectionViewController {
 		}
     }
     
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
+	{
 		let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! SenderCollectionViewCell
-		
 		let tvStationsControllerInstance = tvStationsController()
-		if let _ = tvStationsControllerInstance {
-			let imageURLString = tvStationsControllerInstance!.imageURLOfTVStation(indexPath.row)
+		
+		if let _ = tvStationsControllerInstance
+		{
+			let imageURLString = tvStationsControllerInstance!.imageURLOfTVStationInRegion(region, station: indexPath.row)
 			let imageURL = NSURL(string: imageURLString)
 			
 			let tmpDir = NSTemporaryDirectory()
 			let imageURLmd5Value = md5(string: imageURLString)
 			let tmpFileURL = tmpDir + imageURLmd5Value
-			if let imageData = NSData(contentsOfFile: tmpFileURL) {
+			
+			if let imageData = NSData(contentsOfFile: tmpFileURL)
+			{
 				cell.imageView.image = UIImage(data: imageData)
 			}
-			else {
+			else
+			{
 				let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
-				dispatch_async(dispatch_get_global_queue(priority, 0)) {
+				dispatch_async(dispatch_get_global_queue(priority, 0))
+					{
 					let imageData = NSData(contentsOfURL: imageURL!)
-					dispatch_async(dispatch_get_main_queue()) {
-						if (imageData != nil) {
+					dispatch_async(dispatch_get_main_queue())
+						{
+						if (imageData != nil)
+						{
 							imageData?.writeToFile(tmpFileURL, atomically: true)
 							cell.imageView.image = UIImage(data: imageData!)
 						}
 					}
 				}
 			}
-			cell.titleLabel.text = tvStationsControllerInstance!.nameOfTVStation(indexPath.row)
+			cell.titleLabel.text = tvStationsControllerInstance!.nameOfTVStationInRegion(region, station: indexPath.row)
 			cell.backgroundColor = UIColor.clearColor()
 		}
 
 		return cell
     }
     
-    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
+	{
         
         let playerViewController = PlayerViewController()
-		playerViewController.urlString = tvStationsController()!.hlsURLOfTVStation(indexPath.row)
+		playerViewController.urlString = tvStationsController()!.hlsURLOfTVStationInRegion(region, station: indexPath.row)
 		
         self.tabBarController?.presentViewController(playerViewController, animated: true, completion: { () -> Void in
 			
