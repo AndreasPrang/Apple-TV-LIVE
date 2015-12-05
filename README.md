@@ -10,3 +10,11 @@ Apple TV LIVE is an international LIVE TV App for Apple TV 4 written in Swift.
 
 ## How To add new TV-Stations
 Add them to LIVE-TV/tvStations.json. You dont need to recompile / reinstall the app. The list will be updated while starting the app on Apple TV.
+
+
+
+![Alt text](icon/Screenshots/app.png?raw=true "Apple TV LIVE")
+
+
+
+![Alt text](icon/Screenshots/stations.png?raw=true "Apple TV LIVE")
