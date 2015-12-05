@@ -8,7 +8,7 @@
         <!--German-->
         <scene sceneID="wQD-em-Mem">
             <objects>
-                <collectionViewController title="German" id="nQN-JF-qew" customClass="ViewController" customModule="LIVE_TV" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="CollectionView" title="German" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nQN-JF-qew" customClass="ViewController" customModule="LIVE_TV" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="Deutsch" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" dataMode="prototypes" id="roY-sU-I2j">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,6 +61,11 @@
                                     <constraint firstItem="KxU-mY-F7V" firstAttribute="leading" secondItem="bJ6-Yv-aGf" secondAttribute="leadingMargin" id="xbA-Oe-Zc6"/>
                                     <constraint firstItem="KxU-mY-F7V" firstAttribute="top" secondItem="bJ6-Yv-aGf" secondAttribute="topMargin" id="y0n-fd-SkB"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="imageView" destination="KxU-mY-F7V" id="cqc-UE-6mi"/>
                                     <outlet property="selectedBackgroundView" destination="bVp-lw-le9" id="5Qp-fR-SIT"/>
@@ -97,173 +102,11 @@
                     </tabBar>
                     <connections>
                         <segue destination="nQN-JF-qew" kind="relationship" relationship="viewControllers" id="bkq-LL-3ii"/>
-                        <segue destination="1vc-Gg-r84" kind="relationship" relationship="viewControllers" id="0X9-CL-cSV"/>
-                        <segue destination="O8Y-2j-vG4" kind="relationship" relationship="viewControllers" id="KCu-yS-M9p"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQn-Xh-lea" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-159" y="243"/>
-        </scene>
-        <!--USA-->
-        <scene sceneID="fDz-mq-CfC">
-            <objects>
-                <collectionViewController title="USA" id="1vc-Gg-r84" userLabel="USA" customClass="ViewController" customModule="LIVE_TV" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="USA" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" dataMode="prototypes" id="ZDd-kT-Jba">
-                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cJe-AX-g01">
-                            <size key="itemSize" width="400" height="250"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SenderCollectionViewCell" id="wde-8C-xSD" customClass="SenderCollectionViewCell" customModule="LIVE_TV" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="145" width="400" height="250"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="250"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zjn-Ns-QXN">
-                                            <rect key="frame" x="0.0" y="0.0" width="400" height="250"/>
-                                            <animations/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tLk-de-9ou">
-                                            <rect key="frame" x="8" y="8" width="384" height="184"/>
-                                            <animations/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sender" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rM1-ty-Rf2">
-                                            <rect key="frame" x="8" y="204" width="384" height="30"/>
-                                            <animations/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="30" id="WC8-tA-Os3"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                            <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="1" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <animations/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                                <animations/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailingMargin" secondItem="tLk-de-9ou" secondAttribute="trailing" id="1HD-iG-uqB"/>
-                                    <constraint firstItem="tLk-de-9ou" firstAttribute="leading" secondItem="wde-8C-xSD" secondAttribute="leadingMargin" id="F02-Mg-lbT"/>
-                                    <constraint firstItem="tLk-de-9ou" firstAttribute="bottom" secondItem="wde-8C-xSD" secondAttribute="bottomMargin" constant="-50" id="JVa-9N-oR2"/>
-                                    <constraint firstItem="tLk-de-9ou" firstAttribute="top" secondItem="wde-8C-xSD" secondAttribute="topMargin" id="YET-B9-7j4"/>
-                                    <constraint firstItem="rM1-ty-Rf2" firstAttribute="leading" secondItem="wde-8C-xSD" secondAttribute="leadingMargin" id="cEi-6v-Y4V"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="rM1-ty-Rf2" secondAttribute="trailing" id="eK4-9u-01y"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="rM1-ty-Rf2" secondAttribute="bottom" constant="8" id="fhq-No-egv"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="imageView" destination="tLk-de-9ou" id="Uvz-SK-fel"/>
-                                    <outlet property="selectedBackgroundView" destination="zjn-Ns-QXN" id="frm-zk-vrK"/>
-                                    <outlet property="titleLabel" destination="rM1-ty-Rf2" id="uwi-CN-vDA"/>
-                                </connections>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="1vc-Gg-r84" id="rvQ-8Q-lDL"/>
-                            <outlet property="delegate" destination="1vc-Gg-r84" id="gLL-so-1Uv"/>
-                        </connections>
-                    </collectionView>
-                    <tabBarItem key="tabBarItem" title="USA" id="OlC-un-hZx" userLabel="USA"/>
-                    <navigationItem key="navigationItem" title="USA" id="z9R-YW-uFl" userLabel="USA"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                    <connections>
-                        <outlet property="collectionView" destination="ZDd-kT-Jba" id="3FL-JS-J1s"/>
-                    </connections>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ced-R3-VX2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-93" y="1777"/>
-        </scene>
-        <!--Austria-->
-        <scene sceneID="E2A-SL-phu">
-            <objects>
-                <collectionViewController title="Austria" id="O8Y-2j-vG4" customClass="ViewController" customModule="LIVE_TV" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="Austria" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" dataMode="prototypes" id="TeM-BA-tTd">
-                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pXe-mO-Zms">
-                            <size key="itemSize" width="400" height="250"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SenderCollectionViewCell" id="4VF-bH-piC" customClass="SenderCollectionViewCell" customModule="LIVE_TV" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="145" width="400" height="250"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="250"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k0A-w2-79k">
-                                            <rect key="frame" x="0.0" y="0.0" width="400" height="250"/>
-                                            <animations/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zld-B9-mHl">
-                                            <rect key="frame" x="8" y="8" width="384" height="184"/>
-                                            <animations/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sender" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rz-GJ-vBz">
-                                            <rect key="frame" x="8" y="204" width="384" height="30"/>
-                                            <animations/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="30" id="793-lf-ex1"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                            <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="1" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <animations/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                                <animations/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="7rz-GJ-vBz" firstAttribute="leading" secondItem="4VF-bH-piC" secondAttribute="leadingMargin" id="4Kb-PW-U8I"/>
-                                    <constraint firstItem="Zld-B9-mHl" firstAttribute="bottom" secondItem="4VF-bH-piC" secondAttribute="bottomMargin" constant="-50" id="A89-a4-lNu"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="Zld-B9-mHl" secondAttribute="trailing" id="DUP-NE-uwK"/>
-                                    <constraint firstItem="Zld-B9-mHl" firstAttribute="leading" secondItem="4VF-bH-piC" secondAttribute="leadingMargin" id="H8h-3B-8qd"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="7rz-GJ-vBz" secondAttribute="bottom" constant="8" id="ajJ-34-bG2"/>
-                                    <constraint firstItem="Zld-B9-mHl" firstAttribute="top" secondItem="4VF-bH-piC" secondAttribute="topMargin" id="du8-eT-yAs"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="7rz-GJ-vBz" secondAttribute="trailing" id="jsb-LK-yGN"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="imageView" destination="Zld-B9-mHl" id="CMy-7C-rbT"/>
-                                    <outlet property="selectedBackgroundView" destination="k0A-w2-79k" id="wxz-jh-TKz"/>
-                                    <outlet property="titleLabel" destination="7rz-GJ-vBz" id="eGk-y7-L42"/>
-                                </connections>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="O8Y-2j-vG4" id="GFX-O7-OKy"/>
-                            <outlet property="delegate" destination="O8Y-2j-vG4" id="dyo-Yo-vwW"/>
-                        </connections>
-                    </collectionView>
-                    <tabBarItem key="tabBarItem" title="Austria" id="DjD-4N-4Mh" userLabel="Austria"/>
-                    <navigationItem key="navigationItem" title="Austria" id="3X3-cU-bBW" userLabel="USA"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                    <connections>
-                        <outlet property="collectionView" destination="TeM-BA-tTd" id="sAf-Tr-P4L"/>
-                    </connections>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hKK-ZP-V4c" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2063" y="1737"/>
         </scene>
     </scenes>
 </document>

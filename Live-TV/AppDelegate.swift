@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 			}
 		}
 		
-		let jsonData = NSData(contentsOfURL: NSURL(string: "http://www.andreasprang.de/AppleTV/tvStations.json")!)
+		let jsonData = NSData(contentsOfURL: NSURL(string: "https://raw.githubusercontent.com/AndreasPrang/Apple-TV-LIVE/master/tvStations.json")!)
 		
 		do {
 			let JSON = try NSJSONSerialization.JSONObjectWithData(jsonData!, options:NSJSONReadingOptions(rawValue: 0))
