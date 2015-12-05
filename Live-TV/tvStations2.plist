@@ -32,7 +32,7 @@
 			<key>name</key>
 			<string>ZDF</string>
 			<key>hlsURL</key>
-			<string>http://zdf-hds-de-f.zdf.de/i/de14_v1@147090/master.m3u8?b=0-710&amp;dw=0</string>
+			<string>http://zdf1314-lh.akamaihd.net/i/de14_v1@392878/master.m3u8?dw=0</string>
 			<key>imageURL</key>
 			<string>https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/ZDF.svg/640px-ZDF.svg.png</string>
 		</dict>
