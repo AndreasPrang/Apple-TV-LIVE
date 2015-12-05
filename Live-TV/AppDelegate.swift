@@ -59,14 +59,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 		NSUserDefaults.standardUserDefaults().setObject(stationsDictionary, forKey: "TVStations")
 		NSUserDefaults.standardUserDefaults().synchronize()
-
-//		UIView.animateWithDuration(1, animations: { () -> Void in
-//			activityIndicator.alpha = 0
-//			}) { (Bool) -> Void in
-//				activityIndicator.removeFromSuperview()
-//		}
-//		
-		
 		
 		return true
     }
