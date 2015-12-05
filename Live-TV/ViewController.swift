@@ -114,12 +114,18 @@ class ViewController : UICollectionViewController {
 
 		if let previouslyFocusedIndexPath = context.previouslyFocusedIndexPath {
 			let nextCell = self.collectionView?.cellForItemAtIndexPath(previouslyFocusedIndexPath) as! SenderCollectionViewCell
-			nextCell.backgroundColor = UIColor.clearColor()
+			UIView.animateWithDuration(0.6, animations: { () -> Void in
+				nextCell.backgroundColor = UIColor.clearColor()
+			})
+			
 		}
 		
 		if let nextFocusedIndexPath = context.nextFocusedIndexPath {
 			let oldCell = self.collectionView?.cellForItemAtIndexPath(nextFocusedIndexPath) as? SenderCollectionViewCell
-			oldCell?.backgroundColor = UIColor.lightGrayColor()
+			UIView.animateWithDuration(0.6, animations: { () -> Void in
+				oldCell?.backgroundColor = UIColor.lightGrayColor()
+			})
+			
 		}
 	}
 	

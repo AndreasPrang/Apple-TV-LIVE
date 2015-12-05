@@ -18,7 +18,21 @@ class MainTabBarController : UITabBarController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+		var newViewControllers = [UIViewController]()
+		var i = 0
 		
+		for region in TVStationsController.sharedInstance.regions()
+		{
+			let vc = mainStoryBoard.instantiateViewControllerWithIdentifier("CollectionView") as! ViewController
+			
+			vc.tabBarItem = UITabBarItem(title: region, image: nil, tag: i)
+			vc.region = region
+			newViewControllers.append(vc)
+			i++
+		}
+		
+		self.viewControllers = newViewControllers
 	}
 	
 	
