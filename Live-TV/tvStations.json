@@ -74,6 +74,11 @@
       "hlsURL": "http://video1.anixehd.tv:8080/Apple/wifistream.m3u8",
       "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Anixe.svg/640px-Anixe.svg.png",
       "name": "ANIXE"
+    },
+    {
+    "hlsURL": "http://62.113.221.100/friesischerRundfunk-live/_definst_/mp4:livestream/playlist.m3u8",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/0/04/Frf_logo_2012.png",
+    "name": "Friesischer-Rundfunk"
     }
   ],
   "Austria": [
