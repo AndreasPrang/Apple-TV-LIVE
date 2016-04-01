@@ -21,7 +21,7 @@
       "name": "ZDF"
     },
     {
-      "hlsURL": "http://zdf_hds_ng-f.akamaihd.net/i/none02_v1@87014/master.m3u8?dw=0",
+      "hlsURL": "http://zdf0910-lh.akamaihd.net/i/dach10_v1@392872/master.m3u8?dw=0",
       "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/3sat-Logo.svg/640px-3sat-Logo.svg.png",
       "name": "3sat"
     },
