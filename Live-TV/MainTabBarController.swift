@@ -29,7 +29,7 @@ class MainTabBarController : UITabBarController {
 			vc.tabBarItem = UITabBarItem(title: region, image: nil, tag: i)
 			vc.region = region
 			newViewControllers.append(vc)
-			i++
+			i += 1
 		}
 		
 		self.viewControllers = newViewControllers
