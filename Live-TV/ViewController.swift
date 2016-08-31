@@ -14,7 +14,7 @@ import AVKit
 
 class ViewController : UICollectionViewController {
  
-	public var region : String = "German"
+	internal var region : String = "German"
 
 	private let reuseIdentifier = "SenderCollectionViewCell"
     private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
@@ -27,7 +27,7 @@ class ViewController : UICollectionViewController {
 
 			return self.tvStationsControllerInstance!
 		}
-		let title = self.title!
+		_ = self.title!
 		self.tvStationsControllerInstance = TVStationsController.sharedInstance
 		
 		return self.tvStationsControllerInstance
