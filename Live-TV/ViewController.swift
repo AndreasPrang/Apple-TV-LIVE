@@ -16,8 +16,8 @@ class ViewController : UICollectionViewController {
  
 	internal var region : String = "German"
 
-	private let reuseIdentifier = "SenderCollectionViewCell"
-    private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
+	fileprivate let reuseIdentifier = "SenderCollectionViewCell"
+    fileprivate let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
 	
 	var tvStationsControllerInstance : TVStationsController?
 	
@@ -33,19 +33,19 @@ class ViewController : UICollectionViewController {
 		return self.tvStationsControllerInstance
 	}
 	
-	override func viewDidAppear(animated: Bool)
+	override func viewDidAppear(_ animated: Bool)
 	{
-		self.collectionView?.backgroundColor = UIColor.clearColor()
+		self.collectionView?.backgroundColor = UIColor.clear
 	}
 	
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int
+    override func numberOfSections(in collectionView: UICollectionView) -> Int
 	{
 		self.collectionView?.delegate = self
 		
 		return 1;
 	}
 	
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
 	{
 		let tvStationsControllerInstance = tvStationsController()
 		if let _ = tvStationsControllerInstance {
@@ -58,96 +58,96 @@ class ViewController : UICollectionViewController {
 		}
     }
     
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
 	{
-		let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! SenderCollectionViewCell
+		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SenderCollectionViewCell
 		let tvStationsControllerInstance = tvStationsController()
 		
 		if let _ = tvStationsControllerInstance
 		{
-			let imageURLString = tvStationsControllerInstance!.imageURLOfTVStationInRegion(region, station: indexPath.row)
-			let imageURL = NSURL(string: imageURLString)
+			let imageURLString = tvStationsControllerInstance!.imageURLOfTVStationInRegion(region, station: (indexPath as NSIndexPath).row)
+			let imageURL = URL(string: imageURLString)
 			
 			let tmpDir = NSTemporaryDirectory()
 			let imageURLmd5Value = md5(string: imageURLString)
 			let tmpFileURL = tmpDir + imageURLmd5Value
 			
-			if let imageData = NSData(contentsOfFile: tmpFileURL)
+			if let imageData = try? Data(contentsOf: URL(fileURLWithPath: tmpFileURL))
 			{
 				cell.imageView.image = UIImage(data: imageData)
 			}
 			else
 			{
-				let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
-				dispatch_async(dispatch_get_global_queue(priority, 0))
+				let priority = DispatchQueue.GlobalQueuePriority.default
+				DispatchQueue.global(priority: priority).async
 					{
-					let imageData = NSData(contentsOfURL: imageURL!)
-					dispatch_async(dispatch_get_main_queue())
+					let imageData = try? Data(contentsOf: imageURL!)
+					DispatchQueue.main.async
 						{
 						if (imageData != nil)
 						{
-							imageData?.writeToFile(tmpFileURL, atomically: true)
+							try? imageData?.write(to: URL(fileURLWithPath: tmpFileURL), options: [.atomic])
 							cell.imageView.image = UIImage(data: imageData!)
 						}
 					}
 				}
 			}
-			cell.titleLabel.text = tvStationsControllerInstance!.nameOfTVStationInRegion(region, station: indexPath.row)
-			cell.backgroundColor = UIColor.clearColor()
+			cell.titleLabel.text = tvStationsControllerInstance!.nameOfTVStationInRegion(region, station: (indexPath as NSIndexPath).row)
+			cell.backgroundColor = UIColor.clear
 		}
 
 		return cell
     }
     
-    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
 	{
         
         let playerViewController = PlayerViewController()
-		playerViewController.urlString = tvStationsController()!.hlsURLOfTVStationInRegion(region, station: indexPath.row)
+		playerViewController.urlString = tvStationsController()!.hlsURLOfTVStationInRegion(region, station: (indexPath as NSIndexPath).row)
 		
-        self.tabBarController?.presentViewController(playerViewController, animated: true, completion: { () -> Void in
+        self.tabBarController?.present(playerViewController, animated: true, completion: { () -> Void in
 			
 		})
     }
 
-	override func collectionView(collectionView: UICollectionView, didUpdateFocusInContext context: UICollectionViewFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
+	override func collectionView(_ collectionView: UICollectionView, didUpdateFocusIn context: UICollectionViewFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
 
 		if let previouslyFocusedIndexPath = context.previouslyFocusedIndexPath {
-			let nextCell = self.collectionView?.cellForItemAtIndexPath(previouslyFocusedIndexPath) as! SenderCollectionViewCell
-			UIView.animateWithDuration(0.6, animations: { () -> Void in
-				nextCell.backgroundColor = UIColor.clearColor()
+			let nextCell = self.collectionView?.cellForItem(at: previouslyFocusedIndexPath) as! SenderCollectionViewCell
+			UIView.animate(withDuration: 0.6, animations: { () -> Void in
+				nextCell.backgroundColor = UIColor.clear
 			})
 			
 		}
 		
 		if let nextFocusedIndexPath = context.nextFocusedIndexPath {
-			let oldCell = self.collectionView?.cellForItemAtIndexPath(nextFocusedIndexPath) as? SenderCollectionViewCell
-			UIView.animateWithDuration(0.6, animations: { () -> Void in
-				oldCell?.backgroundColor = UIColor.lightGrayColor()
+			let oldCell = self.collectionView?.cellForItem(at: nextFocusedIndexPath) as? SenderCollectionViewCell
+			UIView.animate(withDuration: 0.6, animations: { () -> Void in
+				oldCell?.backgroundColor = UIColor.lightGray
 			})
 			
 		}
 	}
 	
-	override func collectionView(collectionView: UICollectionView, shouldUpdateFocusInContext context: UICollectionViewFocusUpdateContext) -> Bool {
+	override func collectionView(_ collectionView: UICollectionView, shouldUpdateFocusIn context: UICollectionViewFocusUpdateContext) -> Bool {
 		
 		return true
 	}
 	
-	override func collectionView(collectionView: UICollectionView, didHighlightItemAtIndexPath indexPath: NSIndexPath) {
+	override func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
 //		collectionView.backgroundColor = UIColor.lightGrayColor()
 	}
 	
 
-	override func collectionView(collectionView: UICollectionView, didUnhighlightItemAtIndexPath indexPath: NSIndexPath) {
+	override func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
 		
 	}
 	
 	//MARK: helper
-	func md5(string string: String) -> String {
-		var digest = [UInt8](count: Int(CC_MD5_DIGEST_LENGTH), repeatedValue: 0)
-		if let data = string.dataUsingEncoding(NSUTF8StringEncoding) {
-			CC_MD5(data.bytes, CC_LONG(data.length), &digest)
+	func md5(string: String) -> String {
+		var digest = [UInt8](repeating: 0, count: Int(CC_MD5_DIGEST_LENGTH))
+		if let data = string.data(using: String.Encoding.utf8) {
+			CC_MD5((data as NSData).bytes, CC_LONG(data.count), &digest)
 		}
 		
 		var digestHex = ""

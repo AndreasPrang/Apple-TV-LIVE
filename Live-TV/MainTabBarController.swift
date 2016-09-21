@@ -24,7 +24,7 @@ class MainTabBarController : UITabBarController {
 		
 		for region in TVStationsController.sharedInstance.regions()
 		{
-			let vc = mainStoryBoard.instantiateViewControllerWithIdentifier("CollectionView") as! ViewController
+			let vc = mainStoryBoard.instantiateViewController(withIdentifier: "CollectionView") as! ViewController
 			
 			vc.tabBarItem = UITabBarItem(title: region, image: nil, tag: i)
 			vc.region = region
@@ -36,18 +36,18 @@ class MainTabBarController : UITabBarController {
 	}
 	
 	
-	override func viewDidAppear(animated: Bool)
+	override func viewDidAppear(_ animated: Bool)
 	{
-		let selectedTab = NSUserDefaults.standardUserDefaults().integerForKey(selectedTabKey)
+		let selectedTab = UserDefaults.standard.integer(forKey: selectedTabKey)
 
 		self.selectedIndex = selectedTab
 	}
 	
-	override func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem)
+	override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem)
 	{
-		let selectedTab = tabBar.items?.indexOf(item)
-		NSUserDefaults.standardUserDefaults().setInteger(selectedTab!, forKey: "selectedTabKey")
-		NSUserDefaults.standardUserDefaults().synchronize()
+		let selectedTab = tabBar.items?.index(of: item)
+		UserDefaults.standard.set(selectedTab!, forKey: "selectedTabKey")
+		UserDefaults.standard.synchronize()
 	}
 
 }

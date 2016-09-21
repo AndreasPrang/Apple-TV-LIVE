@@ -12,14 +12,14 @@ private let _sharedInstance = TVStationsController()
 
 class TVStationsController {
 	
-	private var stationsNSDictionary = NSUserDefaults.standardUserDefaults().dictionaryForKey("TVStations")
-	private var stationsDictionary : Dictionary<String, Array<AnyObject>>? = Dictionary<String, Array<AnyObject>>()
+	fileprivate var stationsNSDictionary = UserDefaults.standard.dictionary(forKey: "TVStations")
+	fileprivate var stationsDictionary : Dictionary<String, Array<AnyObject>>? = Dictionary<String, Array<AnyObject>>()
 	
 	class var sharedInstance: TVStationsController {
 		return _sharedInstance
 	}
 
-	private init()
+	fileprivate init()
 	{
 		stationsDictionary = stationsNSDictionary as? Dictionary<String, Array<AnyObject>>
 	}
@@ -30,7 +30,7 @@ class TVStationsController {
 		return Array(stationsDictionary!.keys)
 	}
 	
-	func numberOfTVStationsInRegion(region: String) -> Int
+	func numberOfTVStationsInRegion(_ region: String) -> Int
 	{
 		if let _ = stationsDictionary
 		{
@@ -43,19 +43,19 @@ class TVStationsController {
 		}
 	}
 	
-	func nameOfTVStationInRegion(region: String, station: Int) -> String
+	func nameOfTVStationInRegion(_ region: String, station: Int) -> String
 	{
 		let stationDictionary = stationsDictionary![region]![station] as! Dictionary<String, String>
 		return stationDictionary["name"]!
 	}
 
-	func hlsURLOfTVStationInRegion(region: String, station: Int) -> String
+	func hlsURLOfTVStationInRegion(_ region: String, station: Int) -> String
 	{
 		let stationDictionary = stationsDictionary![region]![station] as! Dictionary<String, String>
 		return stationDictionary["hlsURL"]!
 	}
 
-	func imageURLOfTVStationInRegion(region: String, station: Int) -> String
+	func imageURLOfTVStationInRegion(_ region: String, station: Int) -> String
 	{
 		let stationDictionary = stationsDictionary![region]![station] as! Dictionary<String, String>
 		return stationDictionary["imageURL"]!

@@ -121,6 +121,7 @@
 					797C5FFA1BD40CBB00E2BFB4 = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = Y6ER5M2443;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -296,6 +297,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LIVE-TV/LIVE-TV-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -311,6 +313,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.iSolute.liveTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LIVE-TV/LIVE-TV-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
